@@ -1,0 +1,46 @@
+工作区 git add 暂存区 git commit 本地仓库
+git init 把目录变成git可以管理的仓库（添加隐藏文件）
+git clone 从远程服务器克隆
+ls -a 查看所有文件（包括隐藏）
+ls -ltr 查询文件列表
+cd 切换目录
+git status  查看仓库的状态
+git add 添加到暂存区
+git add .
+git commit 提交,并进入vim
+git commit -m "XXXX"
+echo "XXXX" >. XXXX.txt
+cat XXXX.txt  输出为文件中的内容
+mv file.txt file4.txt  将file.txt文件名改为file4.txt
+git log  查看提交记录
+git log --oneline
+git reset 版本ID  退回版本
+git reset -soft 退回版本并保留工作区和暂存区的所有修改内容
+git reset --hard   丢弃工作区与暂存区的所有修改内容
+git reset --mixed   只保留工作区中的修改内容
+git diff  查看工作区，暂存区，本地仓库之间的差异
+git diff  工作区VS暂存区
+git diff HEAD  工作区+暂存区VS本地仓库
+git diff --cached / --staged  暂存区VS本地仓库
+git diff <commit_hash><commit_hash>/git diff HEAD~HEAD 比较提交之间的差异
+git diff <branch_name><branch_name>  比较分支之间的差异
+git rm删除文件
+rm file; git add file  先从工作区删除文件，然后再暂存删除内容
+git rm <file>  先把文件从工作区和暂存区同时删除
+git rm --cached <file>  把文件从暂存区删除，但保留在当前工作区中
+git rm -r *  递归删除某个目录下的所有子目录和文件
+删除后要提交
+git ignore忽略文件
+.gitignore
+echo access.log > .gitignore
+git remote add origin git@github.com:lkltxwd001/GitLearningNote.git
+git branch -M main
+git push -u origin main
+git branch  查看分支列表
+git branch branch-name  创建分支
+git checkout/switch master  切换分支
+git merge branch-name  合并分支
+git branch -d branch-name  删除分支（已合并）
+git branch -D branch-name  删除分支（未合并）
+git rebase branch_name  断自己,接到后面
+git merge dev  回归主线
